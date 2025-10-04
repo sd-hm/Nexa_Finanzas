@@ -40,6 +40,39 @@
             margin-top: 50px; /* altura del top bar */
         }
     </style>
+    <script>
+        function handleFormSubmit(event) {
+                if (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                
+                const form = document.getElementById('contactForm');
+                const button = document.querySelector('#contactForm button[type="button"]');
+                
+                if (!button) {
+                    console.error('No se encontró el botón');
+                    return false;
+                }
+                
+                const originalHTML = button.innerHTML;
+                
+                button.innerHTML = '<i class="fas fa-check-circle"></i><span class="ml-2">¡Mensaje Enviado!</span>';
+                button.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+                button.disabled = true;
+                
+                alert('¡Gracias por contactarnos! Te responderemos pronto.');
+                
+                if (form) {
+                    form.reset();
+                }
+                button.innerHTML = originalHTML;
+                button.style.background = '';
+                button.disabled = false;
+                
+                return false;
+            }
+    </script>
 </head>
 <body class="min-h-screen bg-gray-50 overflow-x-hidden">
 
@@ -123,6 +156,8 @@
             this.init();
         }
 
+        
+
         async init() {
             await this.loadHeader();
             await this.loadFooter();
@@ -191,7 +226,7 @@
                         <div class="flex justify-between items-center py-4 px-6">
                             <!-- Logo -->
                             <div class="flex items-center">
-                                <img src="assets/images/Nexa_Finanzas_Logo.png" alt="Logo Nexa Finanzas" class="w-[120px] h-[50px] rounded-full object-cover">
+                                <img src="assets/images/Nexa_Finanzas_Logo.png" alt="Logo Nexa Finanzas" class="w-[160px] h-[50px] rounded-full object-cover">
                             </div>
 
                             <!-- Desktop Menu -->
@@ -391,6 +426,7 @@
     } else {
         new NavigationManager();
     }
+    
     </script>
 </body>
 
