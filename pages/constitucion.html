@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <style>
+        .process-card {
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .process-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 201, 183, 0.15);
+        }
+        
+        .step-badge {
+            background: linear-gradient(135deg, #00C9B7 0%, #009688 100%);
+            box-shadow: 0 4px 12px rgba(0, 201, 183, 0.3);
+        }
+        
+        .progress-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #00C9B7 0%, #009688 100%);
+        }
+    </style>
+    <body class="bg-gray-100">
+    
+        <!-- SECCIÓN HERO CON IMAGEN -->
+        <div class="hero-container relative w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden">
+            <img 
+                src="./assets/images/p5.webp" 
+                class="absolute inset-0 w-full h-full object-cover"
+                alt="Constitución de Empresas - Nexa Finanzas"
+            />
+
+            <!-- Overlay con gradiente -->
+            <div class="absolute inset-0 bg-gradient-to-br from-[#1B3A5F]/90 via-[#2B4A6F]/85 to-[#1B3A5F]/80"></div>
+
+            <!-- Contenido Principal -->
+            <div class="relative z-10 flex flex-col justify-center items-center h-full px-4 sm:px-6 lg:px-8 xl:px-16 max-w-full text-center">
+                
+                <!-- Tag de servicio -->
+                <div class="inline-flex items-center gap-2 bg-gradient-to-r from-[#00C9B7] to-[#009688] text-white px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wider mb-6 shadow-lg">
+                    <i class="fas fa-building"></i>
+                    <span>Constitución de Empresas</span>
+                </div>
+                
+                <!-- Título principal -->
+                <h1 class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight break-words mb-4">
+                    Servicio de Creación
+                    <br>
+                    <span class="text-[#00C9B7]">de Empresas en Arequipa</span>
+                </h1>
+
+                <!-- Subtítulo -->
+                <p class="text-gray-200 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium max-w-3xl pb-8 leading-relaxed">
+                    Realiza la creación de tu empresa
+                </p>
+
+                <!-- Botón WhatsApp -->
+                <a 
+                    href="https://wa.me/51962818648" 
+                    target="_blank" 
+                    class="group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#00C9B7] to-[#009688] hover:from-[#009688] hover:to-[#00C9B7] text-white font-bold py-4 px-10 rounded-xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-[#00C9B7]/50 overflow-hidden"
+                >
+                    <span class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+                    <i class="fab fa-whatsapp text-2xl relative z-10"></i>
+                    <span class="relative z-10">Habla con un asesor</span>
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform relative z-10"></i>
+                </a>
+            </div>
+        </div>
+
+
+
+        <!-- Sección de información con diseño mejorado -->
+        <div class="relative bg-white py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                
+                <!-- Contenido principal -->
+                <div class="space-y-12">
+                    
+                    <!-- Header -->
+                    <div class="text-center max-w-4xl mx-auto">
+                        <div class="inline-block bg-[#00C9B7] text-white px-4 py-1.5 rounded-full text-sm font-bold mb-4">
+                            SERVICIO DESTACADO
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-bold text-[#1B3A5F] mb-4">
+                            Constitución de Empresas
+                            <span class="block text-2xl md:text-3xl text-[#00C9B7] mt-2">en Arequipa</span>
+                        </h2>
+                    </div>
+
+                    <!-- Grid: Texto + Imagen -->
+                    <div class="grid lg:grid-cols-2 gap-12 items-start">
+                        
+                        <!-- Columna izquierda: Texto -->
+                        <div class="space-y-6">
+                            <p class="text-gray-700 text-lg leading-relaxed">
+                                En <strong class="text-[#1B3A5F]">Nexa Finanzas</strong> sabemos que iniciar un negocio es un paso decisivo para los emprendedores de Arequipa. Por ello, ofrecemos un servicio completo y personalizado de constitución de empresas, pensado para que tu emprendimiento comience con bases sólidas desde el primer día.
+                            </p>
+
+                            <p class="text-gray-600 leading-relaxed">
+                                Nuestro proceso abarca desde la reserva del nombre, la elaboración de la minuta, la gestión de pagos notariales y registrales, hasta la inscripción de tu empresa en Registros Públicos. Además, te acompañamos con asesoría integral en cada etapa, para que la formalización sea un trámite ágil, seguro y sin complicaciones.
+                            </p>
+
+                            <!-- Quote -->
+                            <div class="relative pl-6 border-l-4 border-[#00C9B7] py-4">
+                                <i class="fas fa-quote-left text-[#00C9B7] text-2xl absolute -left-3 -top-2 bg-white"></i>
+                                <p class="text-lg text-gray-800 italic font-medium">
+                                    Con Nexa Finanzas, crear tu empresa en Arequipa es un proceso claro, confiable y adaptado a tus necesidades.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Columna derecha: Imagen -->
+                        <div class="relative">
+                            <img 
+                                src="./assets/images/constitucion-empresa.jpg" 
+                                class="w-full h-[400px] object-cover rounded-2xl shadow-xl"
+                                alt="Constitución de empresa"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#1B3A5F]/60 to-transparent rounded-2xl"></div>
+                            
+                            <!-- Badge flotante -->
+                            <div class="absolute bottom-6 left-6 right-6">
+                                <div class="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-12 h-12 bg-[#00C9B7] rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-clock text-white text-xl"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-bold text-[#1B3A5F]">Proceso Rápido</div>
+                                            <div class="text-sm text-gray-600">Constitución en tiempo récord</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grid horizontal de proceso con números -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                        <div class="bg-[#1B3A5F] text-white p-6 rounded-xl text-center hover:scale-105 transition-transform">
+                            <div class="text-4xl font-bold mb-2">01</div>
+                            <div class="text-sm">Reserva de nombre</div>
+                        </div>
+                        <div class="bg-[#00C9B7] text-white p-6 rounded-xl text-center hover:scale-105 transition-transform">
+                            <div class="text-4xl font-bold mb-2">02</div>
+                            <div class="text-sm">Elaboración de minuta</div>
+                        </div>
+                        <div class="bg-[#009688] text-white p-6 rounded-xl text-center hover:scale-105 transition-transform">
+                            <div class="text-4xl font-bold mb-2">03</div>
+                            <div class="text-sm">Pagos notariales</div>
+                        </div>
+                        <div class="bg-[#1B3A5F] text-white p-6 rounded-xl text-center hover:scale-105 transition-transform">
+                            <div class="text-4xl font-bold mb-2">04</div>
+                            <div class="text-sm">Registros Públicos</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA full width con diseño plano -->
+        <div class="bg-[#1B3A5F] py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="text-center md:text-left">
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">
+                            ¿Listo para formalizar tu negocio?
+                        </h3>
+                        <p class="text-gray-300">
+                            Te acompañamos en cada paso del proceso
+                        </p>
+                    </div>
+                    
+                    <a 
+                        href="https://wa.me/51962818648" 
+                        target="_blank" 
+                        class="flex-shrink-0 inline-flex items-center gap-3 bg-[#00C9B7] hover:bg-[#009688] text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        <span>Contactar Ahora</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+     <!-- Sección de Planes -->
+    <div class="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <div class="inline-block bg-[#00C9B7] text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
+                    TE OFRECEMOS
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-[#1B3A5F] mb-4">
+                    Nuestros Mejores Planes
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Tenemos los mejores planes diseñados para que empieces tu empresa de una manera rápida y sencilla
+                </p>
+            </div>
+
+            <!-- Planes Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Plan Dúo -->
+                <div class="plan-card bg-white rounded-3xl shadow-lg overflow-hidden relative">
+                    
+                    <!-- Header del Plan -->
+                    <div class="bg-gradient-to-br from-[#00C9B7] to-[#009688] text-white p-8 text-center">
+                        <h3 class="text-3xl font-bold mb-2">Plan Dúo</h3>
+                        <p class="text-white/90 mb-4">"Ideal para quien NO tiene un contador"</p>
+                        <div class="text-5xl font-bold mb-2">S/ ---</div>
+                    </div>
+                    
+                    <!-- Contenido del Plan -->
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <p class="text-sm text-gray-500 mb-2">Constitución de empresas CON contabilidad</p>
+                        </div>
+                        
+                        <!-- Características e Incluye - Versión Compacta -->
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg mb-3 text-[#1B3A5F]">Características</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Capital hasta S/ 5000</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Hasta 2 Socios</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Hasta 1 gerente</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">4 rubros máx.</span>
+                                </div>
+                                <div class="flex items-center space-x-2 sm:col-span-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Con contabilidad</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Incluye -->
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg mb-3 text-[#1B3A5F]">Incluye</h4>
+                            <div class="grid grid-cols-1 gap-1 text-sm">
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Asesoría especializada</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Reserva de Nombre</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Elaboración de Minuta completa</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Actividades súper completas</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Facultades del gerente</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Pagos Notariales y SUNARP</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Inscripción SUNARP</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">RUC y Clave SOL SUNAT</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tiempo de entrega -->
+                        <div class="text-center mb-4">
+                            <p class="font-bold text-lg text-[#1B3A5F]">¡Tu empresa en 15 días!</p>
+                        </div>
+                        
+                        <!-- Botón como enlace -->
+                        <div class="text-center">
+                            <a 
+                                href="https://wa.me/51934135340" 
+                                target="_blank"
+                                class="bg-gradient-to-r from-[#00C9B7] to-[#009688] hover:from-[#009688] hover:to-[#00C9B7] text-white px-8 py-3 rounded-full font-medium transition-all duration-300 inline-block hover:transform hover:scale-105"
+                            >
+                                Solicitar más detalle →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plan Único -->
+                <div class="plan-card bg-white rounded-3xl shadow-lg overflow-hidden">
+                    <!-- Header del Plan -->
+                    <div class="bg-gradient-to-br from-[#1B3A5F] to-[#2B4A6F] text-white p-8 text-center">
+                        <h3 class="text-3xl font-bold mb-2">Plan Único</h3>
+                        <p class="text-gray-200 mb-4">"Ideal para quien SI tiene un contador"</p>
+                        <div class="text-5xl font-bold mb-2">S/ -,---</div>
+                    </div>
+                    
+                    <!-- Contenido del Plan -->
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <p class="text-sm text-gray-500 mb-2">Constitución de empresas SIN contabilidad</p>
+                        </div>
+                        
+                        <!-- Características e Incluye - Versión Compacta -->
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg mb-3 text-[#1B3A5F]">Características</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Capital hasta S/ 5000</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Hasta 2 Socios</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Hasta 1 gerente</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">4 rubros máx.</span>
+                                </div>
+                                <div class="flex items-center space-x-2 sm:col-span-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Sin contabilidad</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Incluye -->
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg mb-3 text-[#1B3A5F]">Incluye</h4>
+                            <div class="grid grid-cols-1 gap-1 text-sm">
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Asesoría especializada</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Reserva de Nombre</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Elaboración de Minuta completa</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Actividades súper completas</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Facultades del gerente</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Pagos Notariales y SUNARP</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">Inscripción SUNARP</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-[#00C9B7] text-lg">✓</span>
+                                    <span class="text-gray-700">RUC y Clave SOL SUNAT</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tiempo de entrega -->
+                        <div class="text-center mb-4">
+                            <p class="font-bold text-lg text-[#1B3A5F]">¡Tu empresa en 15 días!</p>
+                        </div>
+                        
+                        <!-- Botón como enlace -->
+                        <div class="text-center">
+                            <a 
+                                href="https://wa.me/51934135340" 
+                                target="_blank"
+                                class="bg-gradient-to-r from-[#1B3A5F] to-[#2B4A6F] hover:from-[#2B4A6F] hover:to-[#1B3A5F] text-white px-8 py-3 rounded-full font-medium transition-all duration-300 inline-block hover:transform hover:scale-105"
+                            >
+                                Solicitar más detalle →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Sección de Tiempo Record -->
+    <div class="py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                
+                <!-- Contenido de texto -->
+                <div class="text-black lg:w-2/3 mb-6 lg:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        Tu empresa en tiempo record
+                    </h2>
+                    <p class="text-gray-600 text-lg mb-6 max-w-2xl">
+                        Nosotros nos encargamos de todos los trámites, TÚ presencia solo necesitaremos 1 día para la firma en NOTARÍA.
+                    </p>
+                    <!-- Botón como enlace -->
+                    <div class="">
+                        <a 
+                            href="https://wa.me/51934135340" 
+                            target="_blank"
+                            class="bg-[#2B5A8C] text-white px-8 py-3 rounded-full font-medium transition-colors duration-300 inline-block"
+                        >
+                            Contactar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Badge de días -->
+                <div class="lg:w-1/3 flex justify-center lg:justify-end">
+                    <div class="bg-[#2B5A8C] text-white rounded-2xl p-8 text-center shadow-lg">
+                        <div class="text-6xl font-bold mb-2">15</div>
+                        <div class="text-xl font-medium">Días</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN SEPARADOR CON IMAGEN -->
+    <div class="hero-container relative w-full h-[400px] sm:h-[500px] md:h-[600px] overflow-hidden">
+        <img 
+            src="./assets/images/portada3.jpg" 
+            class="absolute inset-0 w-full h-full object-cover"
+            alt="Portada"
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        
+        <div class="relative z-10 flex flex-col justify-center items-center h-full px-4 text-center">
+            <div class="hero-gradient relative w-full max-w-4xl py-12 rounded-2xl overflow-hidden">
+                <!-- Decorative elements -->
+                <div class="absolute top-4 right-8 flex space-x-2">
+                    <div class="w-3 h-3 bg-white opacity-30 rounded-full"></div>
+                    <div class="w-3 h-3 bg-white opacity-30 rounded-full"></div>
+                    <div class="w-3 h-3 bg-white opacity-30 rounded-full"></div>
+                    <div class="w-3 h-3 bg-white opacity-30 rounded-full"></div>
+                </div>
+                
+                <div class="relative z-10 text-center text-white px-4">
+                    <p class="text-lg font-medium mb-2 opacity-90">SOMOS</p>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold">
+                        El paraíso<br>
+                        <span class="text-cyan-300">de los emprendedores</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Sección ¿Por qué hacerlo en Nexa? -->
+    <div class="bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <div class="inline-block bg-[#00C9B7] text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
+                    NEXA FINANZAS AREQUIPA
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-[#1B3A5F] mb-4">
+                    ¿Por qué hacerlo <span class="text-[#00C9B7]">en NEXA FINANZAS?</span>
+                </h2>
+            </div>
+
+            <!-- Tabla de Comparación -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+                
+                <!-- Header de la tabla -->
+                <div class="grid grid-cols-4 bg-gradient-to-r from-[#1B3A5F] to-[#2B4A6F] text-white font-bold text-center">
+                    <div class="p-4 text-left">
+                        <span class="text-lg">BENEFICIOS</span>
+                    </div>
+                    <div class="p-4 flex items-center justify-center">
+                        <div class="flex items-center space-x-2">
+                            <div>
+                                <div class="font-bold text-sm">NEXA FINANZAS</div>
+                                <div class="text-xs">Consulting</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="font-bold text-sm">OTRAS</div>
+                        <div class="text-xs">EMPRESAS</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="font-bold text-sm">NOTARÍAS</div>
+                    </div>
+                </div>
+
+                <!-- Filas de beneficios -->
+                <div class="divide-y divide-gray-100">
+                    
+                    <!-- Fila 1 -->
+                    <div class="grid grid-cols-4 items-center bg-[#00C9B7]/5">
+                        <div class="p-4 text-[#1B3A5F] font-medium text-sm">
+                            Asesoría a la Medida según tu Emprendimiento
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-[#00C9B7] rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✓</span>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✗</span>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✗</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fila 2 -->
+                    <div class="grid grid-cols-4 items-center bg-white">
+                        <div class="p-4 text-[#1B3A5F] font-medium text-sm">
+                            La Minuta lo elaboramos a la Medida y 100% Personalizado
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-[#00C9B7] rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✓</span>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✗</span>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✗</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fila 3 -->
+                    <div class="grid grid-cols-4 items-center bg-[#00C9B7]/5">
+                        <div class="p-4 text-[#1B3A5F] font-medium text-sm">
+                            No Usamos plantillas de minutas.
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-[#00C9B7] rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✓</span>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✗</span>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✗</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fila 4 -->
+                    <div class="grid grid-cols-4 items-center bg-white">
+                        <div class="p-4 text-[#1B3A5F] font-medium text-sm">
+                            Tu actividad lo detallamos lo más completo posible (Solo te pedimos la Palabra Clave de tu Actividad)
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-[#00C9B7] rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✓</span>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✗</span>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✗</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fila 5 -->
+                    <div class="grid grid-cols-4 items-center bg-[#00C9B7]/5">
+                        <div class="p-4 text-[#1B3A5F] font-medium text-sm">
+                            Tu minuta estará con todas las Clausulas
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-[#00C9B7] rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✓</span>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✗</span>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✗</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fila 6 -->
+                    <div class="grid grid-cols-4 items-center bg-white">
+                        <div class="p-4 text-[#1B3A5F] font-medium text-sm">
+                            Tu empresa estará con todas las Facultadades del Gerente
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-[#00C9B7] rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✓</span>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✗</span>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✗</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fila 7 -->
+                    <div class="grid grid-cols-4 items-center bg-[#00C9B7]/5">
+                        <div class="p-4 text-[#1B3A5F] font-medium text-sm">
+                            Tu Minuta de tu Empresa tendrá más de 20 páginas
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-[#00C9B7] rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✓</span>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✗</span>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✗</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fila 8 -->
+                    <div class="grid grid-cols-4 items-center bg-white">
+                        <div class="p-4 text-[#1B3A5F] font-medium text-sm">
+                            No trabajamos por SID SUNARP, CENTROS MAC, COFIDE y Ministerio de Producción
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-[#00C9B7] rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✓</span>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✗</span>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-white text-sm font-bold">✗</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Header Section -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 bg-[#00C9B7] text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-4 shadow-lg">
+                    <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                    Proceso
+                </div>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-[#1B3A5F] mb-2">
+                    Nuestro Proceso
+                </h2>
+                <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-[#00C9B7] mb-4">
+                    en 7 Pasos
+                </h3>
+                <p class="text-base sm:text-lg text-[#2B5A8C] max-w-2xl mx-auto">
+                    Simple, profesional y transparente
+                </p>
+            </div>
+
+            <!-- Steps Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                
+                <!-- PASO 1 -->
+                <div class="process-card bg-white rounded-xl p-6 shadow-lg border-2 border-gray-100 relative group">
+                    <div class="absolute -top-3 -left-3 step-badge w-12 h-12 rounded-lg flex items-center justify-center text-white font-black text-lg z-10">
+                        01
+                    </div>
+                    <div class="pt-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-[#00C9B7]/10 to-[#009688]/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-comments text-[#00C9B7] text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-[#1B3A5F] mb-2">Hablamos de tu Emprendimiento</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Reunión personalizada para conocer los detalles de tu proyecto y resolver todas tus dudas.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PASO 2 -->
+                <div class="process-card bg-white rounded-xl p-6 shadow-lg border-2 border-gray-100 relative group">
+                    <div class="absolute -top-3 -left-3 step-badge w-12 h-12 rounded-lg flex items-center justify-center text-white font-black text-lg z-10">
+                        02
+                    </div>
+                    <div class="pt-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-[#00C9B7]/10 to-[#009688]/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-clipboard-list text-[#00C9B7] text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-[#1B3A5F] mb-2">Levantamiento de Información</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Envías requisitos y voucher del 50%. Iniciamos la reserva del nombre de tu empresa.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PASO 3 -->
+                <div class="process-card bg-white rounded-xl p-6 shadow-lg border-2 border-gray-100 relative group">
+                    <div class="absolute -top-3 -left-3 step-badge w-12 h-12 rounded-lg flex items-center justify-center text-white font-black text-lg z-10">
+                        03
+                    </div>
+                    <div class="pt-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-[#00C9B7]/10 to-[#009688]/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-file-alt text-[#00C9B7] text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-[#1B3A5F] mb-2">Elaboramos tu Minuta</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Minuta personalizada con todas las cláusulas y facultades del gerente a medida.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PASO 4 -->
+                <div class="process-card bg-white rounded-xl p-6 shadow-lg border-2 border-gray-100 relative group">
+                    <div class="absolute -top-3 -left-3 step-badge w-12 h-12 rounded-lg flex items-center justify-center text-white font-black text-lg z-10">
+                        04
+                    </div>
+                    <div class="pt-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-[#00C9B7]/10 to-[#009688]/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-paper-plane text-[#00C9B7] text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-[#1B3A5F] mb-2">Envío de Borrador</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Recibes el borrador de tu minuta para revisión y el abono del saldo restante.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PASO 5 -->
+                <div class="process-card bg-white rounded-xl p-6 shadow-lg border-2 border-gray-100 relative group">
+                    <div class="absolute -top-3 -left-3 step-badge w-12 h-12 rounded-lg flex items-center justify-center text-white font-black text-lg z-10">
+                        05
+                    </div>
+                    <div class="pt-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-[#00C9B7]/10 to-[#009688]/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-pen-fancy text-[#00C9B7] text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-[#1B3A5F] mb-2">Cuenta y Firma en Notaría</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Un solo día para aperturar cuenta bancaria, depositar capital y firmar en notaría.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PASO 6 -->
+                <div class="process-card bg-white rounded-xl p-6 shadow-lg border-2 border-gray-100 relative group">
+                    <div class="absolute -top-3 -left-3 step-badge w-12 h-12 rounded-lg flex items-center justify-center text-white font-black text-lg z-10">
+                        06
+                    </div>
+                    <div class="pt-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-[#00C9B7]/10 to-[#009688]/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-building text-[#00C9B7] text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-[#1B3A5F] mb-2">Inscripción en SUNARP</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Inscripción en 7 días hábiles. Tu empresa constituida con RUC listo para operar.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- PASO 7 - Destacado -->
+            <div class="process-card bg-gradient-to-br from-[#00C9B7] to-[#009688] rounded-2xl p-8 shadow-2xl border-2 border-[#00C9B7]/50 relative">
+                <div class="absolute -top-4 -left-4 bg-white w-14 h-14 rounded-xl flex items-center justify-center text-[#00C9B7] font-black text-xl shadow-xl">
+                    07
+                </div>
+                <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-white/20 backdrop-blur rounded-2xl flex items-center justify-center">
+                            <i class="fas fa-chart-line text-white text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-2xl font-bold text-white mb-2">Plan Duo - Asesoría Tributaria</h4>
+                        <p class="text-white/90 leading-relaxed">
+                            Si elegiste el plan Duo, te asesoramos para elegir el mejor régimen tributario y optimizar tus impuestos con SUNAT. Aseguramos el cumplimiento perfecto desde el inicio.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <div class="bg-white/20 backdrop-blur rounded-xl px-6 py-3 border-2 border-white/30">
+                            <div class="text-white/80 text-xs font-semibold uppercase tracking-wider">Opcional</div>
+                            <div class="text-white text-2xl font-black">Plan Duo</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Características del servicio -->
+            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-gray-50 rounded-xl p-4 text-center border border-gray-100">
+                    <div class="w-12 h-12 bg-gradient-to-br from-[#00C9B7] to-[#009688] rounded-lg flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-clock text-white text-xl"></i>
+                    </div>
+                    <div class="text-2xl font-black text-[#1B3A5F] mb-1">7 días</div>
+                    <div class="text-xs text-gray-600 font-semibold">Tiempo promedio</div>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-4 text-center border border-gray-100">
+                    <div class="w-12 h-12 bg-gradient-to-br from-[#00C9B7] to-[#009688] rounded-lg flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-shield-alt text-white text-xl"></i>
+                    </div>
+                    <div class="text-2xl font-black text-[#1B3A5F] mb-1">100%</div>
+                    <div class="text-xs text-gray-600 font-semibold">Garantizado</div>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-4 text-center border border-gray-100">
+                    <div class="w-12 h-12 bg-gradient-to-br from-[#00C9B7] to-[#009688] rounded-lg flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-users text-white text-xl"></i>
+                    </div>
+                    <div class="text-2xl font-black text-[#1B3A5F] mb-1">500+</div>
+                    <div class="text-xs text-gray-600 font-semibold">Clientes felices</div>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-4 text-center border border-gray-100">
+                    <div class="w-12 h-12 bg-gradient-to-br from-[#00C9B7] to-[#009688] rounded-lg flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-headset text-white text-xl"></i>
+                    </div>
+                    <div class="text-2xl font-black text-[#1B3A5F] mb-1">24/7</div>
+                    <div class="text-xs text-gray-600 font-semibold">Soporte</div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="mt-12 text-center">
+                <div class="bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-100">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-[#1B3A5F] mb-3">¿Listo para empezar?</h3>
+                    <p class="text-gray-600 mb-6 max-w-xl mx-auto">
+                        Inicia tu proceso de constitución hoy y haz realidad tu emprendimiento
+                    </p>
+                    <a 
+                        href="https://wa.me/51934135340" 
+                        target="_blank"
+                        class="inline-flex items-center gap-3 bg-gradient-to-r from-[#00C9B7] to-[#009688] hover:from-[#009688] hover:to-[#00C9B7] text-white font-bold py-4 px-8 rounded-xl shadow-xl transition-all duration-300 transform hover:scale-105"
+                    >
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        <span>Habla con un asesor</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <div class="relative w-full min-h-[800px] sm:h-[500px] md:h-[600px] overflow-hidden pt-[100px]">
+        <!-- Imagen de fondo -->
+        <img
+            src="./assets/images/portada4.jpg"
+            class="absolute inset-0 w-full h-full object-cover"
+            alt="Portada Nexa Finanzas"
+        />
+        
+        <!-- Overlay con gradiente de marca -->
+        <div class="absolute inset-0 bg-gradient-to-br from-[#1B3A5F]/80 via-[#2B5A8C]/70 to-[#1B3A5F]/80"></div>
+        
+        <!-- Decoración de fondo -->
+        <div class="absolute top-0 right-0 w-1/2 h-full opacity-10">
+            <div class="absolute top-20 right-20 w-64 h-64 rounded-full" style="background: radial-gradient(circle, #00C9B7 0%, transparent 70%);"></div>
+            <div class="absolute bottom-20 right-40 w-96 h-96 rounded-full" style="background: radial-gradient(circle, #00D4E6 0%, transparent 70%);"></div>
+        </div>
+        
+        <!-- Contenido -->
+        <div class="relative z-10 flex flex-col justify-center items-center h-full px-4 text-center">
+            <div class="w-full max-w-5xl">
+                
+                <!-- Badge superior -->
+                <div class="inline-flex items-center gap-2 bg-[#00C9B7] text-white px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider mb-8 shadow-2xl backdrop-blur-sm border-2 border-white/20">
+                    <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                    Nexa Finanzas Arequipa
+                </div>
+                
+                <!-- Título principal -->
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 drop-shadow-2xl">
+                    Te acompañamos antes, durante y después de la
+                    <span class="block mt-2 bg-gradient-to-r from-[#00C9B7] to-[#00D4E6] bg-clip-text text-transparent drop-shadow-none">
+                        creación de tu empresa
+                    </span>
+                </h1>
+                
+                <!-- Subtítulo -->
+                <p class="text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8 drop-shadow-lg">
+                    Transformamos tu visión empresarial en realidad con asesoría profesional, procesos ágiles y acompañamiento integral
+                </p>
+                
+                <!-- Botones de acción -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a 
+                        href="https://wa.me/51934135340" 
+                        target="_blank"
+                        class="group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#00C9B7] to-[#009688] hover:from-[#009688] hover:to-[#00C9B7] text-white font-bold py-4 px-8 rounded-xl shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden"
+                    >
+                        <span class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+                        <i class="fab fa-whatsapp text-2xl relative z-10"></i>
+                        <span class="relative z-10">Habla con un asesor</span>
+                        <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform relative z-10"></i>
+                    </a>
+                    
+                    <a 
+                        href="#servicios"
+                        class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md border-2 border-white/30 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl shadow-xl transition-all duration-300 transform hover:scale-105"
+                    >
+                        <i class="fas fa-briefcase"></i>
+                        <span>Ver servicios</span>
+                    </a>
+                </div>
+                
+                <!-- Stats -->
+                <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
+                        <div class="text-3xl font-black text-white mb-1">500+</div>
+                        <div class="text-xs text-white/80 font-semibold uppercase tracking-wide">Clientes</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
+                        <div class="text-3xl font-black text-[#00C9B7] mb-1">10+</div>
+                        <div class="text-xs text-white/80 font-semibold uppercase tracking-wide">Años</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
+                        <div class="text-3xl font-black text-white mb-1">7 días</div>
+                        <div class="text-xs text-white/80 font-semibold uppercase tracking-wide">Promedio</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
+                        <div class="text-3xl font-black text-[#00C9B7] mb-1">24/7</div>
+                        <div class="text-xs text-white/80 font-semibold uppercase tracking-wide">Soporte</div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- SECCIÓN DE SERVICIOS -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50">
+        <div class="max-w-6xl mx-auto">
+            
+            <!-- Header de la sección -->
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 bg-[#00C9B7] text-white px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider mb-6 shadow-lg">
+                    <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                    Nuestros Servicios
+                </div>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-[#1B3A5F] mb-3">
+                    En <span class="bg-gradient-to-r from-[#00C9B7] to-[#00D4E6] bg-clip-text text-transparent">Nexa Finanzas</span>
+                </h2>
+                <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-[#1B3A5F] mb-6">
+                    te ofrecemos
+                </h3>
+                <p class="text-[#2B5A8C] text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+                    Tenemos los mejores planes diseñados para que empieces tu empresa de una manera rápida y sencilla
+                </p>
+            </div>
+
+            <!-- Grid de servicios -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Servicio 1: Asesoría personalizada -->
+                <div class="group bg-white rounded-2xl p-6 text-center shadow-lg border-2 border-gray-100 hover:border-[#00C9B7] transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-[#00C9B7] to-[#009688] rounded-xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <i class="fas fa-user-tie text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#1B3A5F] mb-3">
+                        Asesoría personalizada
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Asesoría personalizada de acuerdo a las necesidades de tu negocio
+                    </p>
+                </div>
+
+                <!-- Servicio 2: Atención constante -->
+                <div class="group bg-white rounded-2xl p-6 text-center shadow-lg border-2 border-gray-100 hover:border-[#00C9B7] transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-[#00C9B7] to-[#009688] rounded-xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <i class="fas fa-comments text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#1B3A5F] mb-3">
+                        Atención constante
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Seguimiento constante por WhatsApp y con respuesta a la brevedad
+                    </p>
+                </div>
+
+                <!-- Servicio 3: Nuestro Proceso -->
+                <div class="group bg-white rounded-2xl p-6 text-center shadow-lg border-2 border-gray-100 hover:border-[#00C9B7] transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-[#00C9B7] to-[#009688] rounded-xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <i class="fas fa-file-contract text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#1B3A5F] mb-3">
+                        Nuestro Proceso
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Proceso digital, completo y con precios accesibles. Evita tiempo y esfuerzo
+                    </p>
+                </div>
+
+                <!-- Servicio 4: Cobertura nacional -->
+                <div class="group bg-white rounded-2xl p-6 text-center shadow-lg border-2 border-gray-100 hover:border-[#00C9B7] transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-[#00C9B7] to-[#009688] rounded-xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <i class="fas fa-map-marked-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#1B3A5F] mb-3">
+                        Cobertura nacional
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Disponible para todo el Perú
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Características adicionales -->
+            <div class="mt-12 bg-gradient-to-br from-[#00C9B7] to-[#009688] rounded-2xl p-8 shadow-2xl">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white mb-2">¿Por qué elegirnos?</h3>
+                    <p class="text-white/90">Compromiso total con tu emprendimiento</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-5 text-center border border-white/20">
+                        <i class="fas fa-shield-alt text-white text-3xl mb-3"></i>
+                        <div class="text-2xl font-black text-white mb-1">100%</div>
+                        <div class="text-xs text-white/80 font-semibold uppercase">Garantizado</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-5 text-center border border-white/20">
+                        <i class="fas fa-clock text-white text-3xl mb-3"></i>
+                        <div class="text-2xl font-black text-white mb-1">7 días</div>
+                        <div class="text-xs text-white/80 font-semibold uppercase">Promedio</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-5 text-center border border-white/20">
+                        <i class="fas fa-users text-white text-3xl mb-3"></i>
+                        <div class="text-2xl font-black text-white mb-1">500+</div>
+                        <div class="text-xs text-white/80 font-semibold uppercase">Clientes</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-5 text-center border border-white/20">
+                        <i class="fas fa-headset text-white text-3xl mb-3"></i>
+                        <div class="text-2xl font-black text-white mb-1">24/7</div>
+                        <div class="text-xs text-white/80 font-semibold uppercase">Soporte</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Línea separadora superior -->
+    <div class="w-full h-1 bg-gradient-to-r from-transparent via-[#00C9B7] to-transparent"></div>
+    
+    <!-- SECCIÓN DE REQUISITOS -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-6xl mx-auto">
+            
+            <!-- Header compacto -->
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center gap-2 bg-[#00C9B7] text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-4 shadow-lg">
+                    <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                    Requisitos
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black text-[#1B3A5F] mb-2">
+                    Requisitos para <span class="bg-gradient-to-r from-[#00C9B7] to-[#00D4E6] bg-clip-text text-transparent">Constituir</span>
+                </h2>
+                <p class="text-[#2B5A8C] text-sm sm:text-base max-w-2xl mx-auto">
+                    Información necesaria para iniciar el proceso
+                </p>
+            </div>
+
+            <!-- Grid organizado -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                
+                <!-- Información de la Empresa -->
+                <div class="bg-white rounded-xl p-6 shadow-lg border-2 border-gray-100 hover:border-[#00C9B7] transition-all">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-12 h-12 bg-gradient-to-br from-[#00C9B7] to-[#009688] rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-building text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#1B3A5F]">Datos de la Empresa</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-2 text-sm">
+                            <div class="w-5 h-5 bg-[#00C9B7] rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <span class="text-gray-700">Tres (3) opciones de nombre comercial</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-sm">
+                            <div class="w-5 h-5 bg-[#00C9B7] rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <span class="text-gray-700">Monto del capital social inicial</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-sm">
+                            <div class="w-5 h-5 bg-[#00C9B7] rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <span class="text-gray-700">Actividades económicas principales</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-sm">
+                            <div class="w-5 h-5 bg-[#00C9B7] rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <span class="text-gray-700">Designación de gerente(s) general(es)</span>
+                        </div>
+                    </div>
+                    <!-- Imagen integrada -->
+                    <div class="mt-6 rounded-lg overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=200&fit=crop&q=80" 
+                            alt="Documentos empresariales"
+                            class="w-full h-32 object-cover"
+                        />
+                    </div>
+                </div>
+
+                <!-- Información de los Socios -->
+                <div class="bg-white rounded-xl p-6 shadow-lg border-2 border-gray-100 hover:border-[#00C9B7] transition-all">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-12 h-12 bg-gradient-to-br from-[#00C9B7] to-[#009688] rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-users text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#1B3A5F]">Datos de los Socios</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-2 text-sm">
+                            <div class="w-5 h-5 bg-[#00C9B7] rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <span class="text-gray-700">DNI vigente de todos los socios</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-sm">
+                            <div class="w-5 h-5 bg-[#00C9B7] rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <span class="text-gray-700">DNI de cónyuges (cuando corresponda)</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-sm">
+                            <div class="w-5 h-5 bg-[#00C9B7] rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <span class="text-gray-700">Porcentaje de participación de cada socio</span>
+                        </div>
+                    </div>
+                    <!-- Imagen integrada -->
+                    <div class="mt-6 rounded-lg overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=200&fit=crop&q=80" 
+                            alt="Equipo de socios"
+                            class="w-full h-45 object-cover"
+                        />
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Banner compacto -->
+            <div class="bg-gradient-to-r from-[#00C9B7] to-[#009688] rounded-xl p-6 text-center shadow-xl">
+                <div class="flex items-center justify-center gap-3">
+                    <i class="fas fa-info-circle text-white text-2xl"></i>
+                    <p class="text-white font-semibold text-sm sm:text-base">
+                        Proceso 100% digital. Solo un día presencial para firma en notaría
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Línea separadora -->
+    <div class="w-full h-1 bg-gradient-to-r from-transparent via-[#00C9B7] to-transparent"></div>
+
+    <!-- SECCIÓN QUÉ TE ENTREGAMOS -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            
+            <!-- Header compacto -->
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center gap-2 bg-gradient-to-r from-[#00C9B7] to-[#009688] text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-4 shadow-lg">
+                    <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                    Entregables
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black text-[#1B3A5F] mb-2">
+                    ¿Qué te <span class="bg-gradient-to-r from-[#00C9B7] to-[#00D4E6] bg-clip-text text-transparent">Entregamos?</span>
+                </h2>
+                <p class="text-[#2B5A8C] text-sm sm:text-base max-w-2xl mx-auto">
+                    Documentos legales necesarios para operar
+                </p>
+            </div>
+
+            <!-- Grid balanceado -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                
+                <!-- Documento 1 -->
+                <div class="bg-white rounded-xl p-6 shadow-lg border-2 border-gray-100 hover:border-[#00C9B7] transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-gradient-to-br from-[#00C9B7] to-[#009688] rounded-lg flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-certificate text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-[#1B3A5F] mb-2 text-center">Partida Registral</h4>
+                    <p class="text-gray-600 text-xs text-center mb-4">Título de inscripción SUNARP</p>
+                    <div class="rounded-lg overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=150&fit=crop&q=80" 
+                            alt="Partida Registral"
+                            class="w-full h-24 object-cover"
+                        />
+                    </div>
+                </div>
+
+                <!-- Documento 2 -->
+                <div class="bg-white rounded-xl p-6 shadow-lg border-2 border-gray-100 hover:border-[#00C9B7] transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-gradient-to-br from-[#00C9B7] to-[#009688] rounded-lg flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-file-contract text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-[#1B3A5F] mb-2 text-center">Testimonio</h4>
+                    <p class="text-gray-600 text-xs text-center mb-4">Documento notarial oficial</p>
+                    <div class="rounded-lg overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=400&h=150&fit=crop&q=80" 
+                            alt="Testimonio"
+                            class="w-full h-24 object-cover"
+                        />
+                    </div>
+                </div>
+
+                <!-- Documento 3 -->
+                <div class="bg-white rounded-xl p-6 shadow-lg border-2 border-gray-100 hover:border-[#00C9B7] transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-gradient-to-br from-[#00C9B7] to-[#009688] rounded-lg flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-id-card text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-[#1B3A5F] mb-2 text-center">RUC Activado</h4>
+                    <p class="text-gray-600 text-xs text-center mb-4">Listo para operar</p>
+                    <div class="rounded-lg overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=150&fit=crop&q=80" 
+                            alt="RUC"
+                            class="w-full h-24 object-cover"
+                        />
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Garantía compacta -->
+            <div class="bg-gradient-to-br from-[#00C9B7] to-[#009688] rounded-xl p-6 shadow-xl">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 bg-white/20 backdrop-blur rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-shield-alt text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white">Garantía Total</h4>
+                            <p class="text-white/90 text-sm">Validez legal completa</p>
+                        </div>
+                    </div>
+                    <a 
+                        href="https://wa.me/51934135340" 
+                        target="_blank"
+                        class="inline-flex items-center gap-2 bg-white text-[#00C9B7] font-bold py-3 px-6 rounded-lg shadow-lg transition-all hover:scale-105 text-sm"
+                    >
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        <span>Consultar</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Hero CTA Section -->
+    <section class="relative bg-gradient-to-br from-[#1B3A5F] via-[#2B5A8C] to-[#1B3A5F] text-white py-16 px-6 overflow-hidden">
+        
+        <!-- Decoraciones geométricas -->
+        <div class="absolute left-0 top-0 w-40 h-full opacity-20">
+            <div class="absolute top-10 left-6 w-20 h-0.5 bg-[#00C9B7] transform -rotate-45"></div>
+            <div class="absolute top-20 left-4 w-16 h-0.5 bg-[#00C9B7] transform -rotate-45"></div>
+            <div class="absolute top-32 left-8 w-12 h-0.5 bg-[#00C9B7] transform -rotate-45"></div>
+            <div class="absolute top-44 left-3 w-18 h-0.5 bg-[#00D4E6] transform -rotate-45"></div>
+        </div>
+        
+        <div class="absolute right-0 bottom-0 w-40 h-full opacity-20">
+            <div class="absolute bottom-10 right-6 w-20 h-0.5 bg-[#00C9B7] transform rotate-45"></div>
+            <div class="absolute bottom-20 right-4 w-16 h-0.5 bg-[#00C9B7] transform rotate-45"></div>
+            <div class="absolute bottom-32 right-8 w-12 h-0.5 bg-[#00C9B7] transform rotate-45"></div>
+            <div class="absolute bottom-44 right-3 w-18 h-0.5 bg-[#00D4E6] transform rotate-45"></div>
+        </div>
+
+        <!-- Círculos decorativos -->
+        <div class="absolute top-10 right-20 w-32 h-32 rounded-full opacity-10" style="background: radial-gradient(circle, #00C9B7 0%, transparent 70%);"></div>
+        <div class="absolute bottom-10 left-20 w-40 h-40 rounded-full opacity-10" style="background: radial-gradient(circle, #00D4E6 0%, transparent 70%);"></div>
+        
+        <!-- Main Content -->
+        <div class="relative max-w-6xl mx-auto">
+            <div class="text-center">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 bg-[#00C9B7] text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-6 shadow-xl">
+                    <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                    Planes a tu medida
+                </div>
+                
+                <!-- Título principal -->
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight drop-shadow-2xl">
+                    ¡Empieza ahora!
+                </h1>
+                
+                <!-- Subtítulo -->
+                <p class="text-lg sm:text-xl lg:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
+                    Nuestros planes fueron diseñados a la medida de tus necesidades
+                </p>
+                
+                <!-- Decorative pattern -->
+                <div class="flex justify-center items-center gap-4 mb-10">
+                    <div class="grid grid-cols-4 gap-2">
+                        <div class="w-3 h-3 text-[#00C9B7] opacity-70 font-bold">✕</div>
+                        <div class="w-3 h-3 text-[#00C9B7] opacity-70 font-bold">✕</div>
+                        <div class="w-3 h-3 text-[#00C9B7] opacity-70 font-bold">✕</div>
+                        <div class="w-3 h-3 text-[#00C9B7] opacity-70 font-bold">✕</div>
+                    </div>
+                    <div class="w-12 h-0.5 bg-[#00C9B7] opacity-50"></div>
+                    <div class="grid grid-cols-4 gap-2">
+                        <div class="w-3 h-3 text-[#00D4E6] opacity-70 font-bold">✕</div>
+                        <div class="w-3 h-3 text-[#00D4E6] opacity-70 font-bold">✕</div>
+                        <div class="w-3 h-3 text-[#00D4E6] opacity-70 font-bold">✕</div>
+                        <div class="w-3 h-3 text-[#00D4E6] opacity-70 font-bold">✕</div>
+                    </div>
+                </div>
+                
+                <!-- Botones CTA -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
+                    <a 
+                        href="https://wa.me/51934135340" 
+                        target="_blank"
+                        class="group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#00C9B7] to-[#00D4E6] hover:from-[#00D4E6] hover:to-[#00C9B7] text-white font-bold py-4 px-8 rounded-xl shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden"
+                    >
+                        <span class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+                        <i class="fab fa-whatsapp text-2xl relative z-10"></i>
+                        <span class="relative z-10">Habla con un asesor</span>
+                        <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform relative z-10"></i>
+                    </a>
+                    
+                </div>
+                   
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- SECCIÓN CONTACTO -->
+    <div class="relative py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        
+        <!-- Imagen de fondo -->
+        <img 
+            src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1920&q=80" 
+            class="absolute inset-0 w-full h-full object-cover"
+            alt="Background"
+        />
+        
+        <!-- Overlay oscuro -->
+        <div class="absolute inset-0 bg-gradient-to-br from-[#1B3A5F]/90 via-[#2B5A8C]/85 to-[#1B3A5F]/90"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            
+            <!-- Encabezado de sección -->
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center gap-2 bg-[#00C9B7] text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-4 shadow-lg">
+                    <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                    Contacto
+                </div>
+                <h2 class="text-white text-3xl sm:text-4xl md:text-5xl font-black mb-2 drop-shadow-lg">
+                    HABLA CON
+                </h2>
+                <h2 class="text-[#00C9B7] text-3xl sm:text-4xl md:text-5xl font-black mb-4 drop-shadow-lg">
+                    NOSOTROS
+                </h2>
+                <p class="text-white text-base sm:text-lg max-w-2xl mx-auto drop-shadow-md">
+                    Estamos aquí para ayudarte. Contáctanos con cualquier pregunta o consulta.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
+                
+                <!-- COLUMNA IZQUIERDA - Formulario -->
+                <div class="h-full">
+                    <div class="bg-white/95 backdrop-blur-md border-2 border-white/20 rounded-2xl p-6 shadow-2xl h-full flex flex-col">
+                        <div class="flex items-center gap-3 pb-4 border-b border-gray-200 mb-6">
+                            <div class="w-10 h-10 bg-gradient-to-br from-[#00C9B7] to-[#009688] rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-white text-lg"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs font-semibold text-[#00C9B7] uppercase tracking-wider">Formulario</div>
+                                <h3 class="text-base font-bold text-[#1B3A5F]">Envíanos un mensaje</h3>
+                            </div>
+                        </div>
+
+                        <form id="contactForm" class="space-y-4 flex-1 flex flex-col" onsubmit="return false;">
+                            <div class="space-y-1.5">
+                                <label class="block text-xs font-bold text-[#1B3A5F]" for="name">
+                                    <i class="fas fa-user text-[#00C9B7] mr-1.5"></i>Nombres y Apellidos
+                                </label>
+                                <input 
+                                    class="w-full rounded-lg border-2 border-gray-200 h-10 px-3 text-sm transition-all duration-200 focus:outline-none focus:border-[#00C9B7] focus:ring-2 focus:ring-[#00C9B7]/20" 
+                                    style="color: #1B3A5F;"
+                                    id="name" 
+                                    placeholder="Tu nombre completo"
+                                    type="text"
+                                    required
+                                />
+                            </div>
+                            
+                            <div class="space-y-1.5">
+                                <label class="block text-xs font-bold text-[#1B3A5F]" for="phone">
+                                    <i class="fas fa-phone text-[#00C9B7] mr-1.5"></i>Celular o WhatsApp
+                                </label>
+                                <input 
+                                    class="w-full rounded-lg border-2 border-gray-200 h-10 px-3 text-sm transition-all duration-200 focus:outline-none focus:border-[#00C9B7] focus:ring-2 focus:ring-[#00C9B7]/20" 
+                                    style="color: #1B3A5F;"
+                                    id="phone" 
+                                    placeholder="999 888 777" 
+                                    type="tel"
+                                    required
+                                />
+                            </div>
+                            
+                            <div class="space-y-1.5">
+                                <label class="block text-xs font-bold text-[#1B3A5F]" for="email">
+                                    <i class="fas fa-envelope text-[#00C9B7] mr-1.5"></i>Correo Electrónico <span class="text-red-500">*</span>
+                                </label>
+                                <input 
+                                    class="w-full rounded-lg border-2 border-gray-200 h-10 px-3 text-sm transition-all duration-200 focus:outline-none focus:border-[#00C9B7] focus:ring-2 focus:ring-[#00C9B7]/20" 
+                                    style="color: #1B3A5F;"
+                                    id="email" 
+                                    placeholder="tu@email.com"
+                                    type="email"
+                                    required
+                                />
+                            </div>
+
+                            <div class="space-y-1.5">
+                                <label class="block text-xs font-bold text-[#1B3A5F]" for="service">
+                                    <i class="fas fa-briefcase text-[#00C9B7] mr-1.5"></i>Tipo de Servicio
+                                </label>
+                                <select 
+                                    class="w-full rounded-lg border-2 border-gray-200 h-10 px-3 text-sm transition-all duration-200 focus:outline-none focus:border-[#00C9B7] focus:ring-2 focus:ring-[#00C9B7]/20" 
+                                    style="color: #1B3A5F;"
+                                    id="service"
+                                    required
+                                >
+                                    <option>Constitución de Empresa</option>
+                                    <option>Contabilidad General</option>
+                                    <option>Facturación Electrónica</option>
+                                    <option>Asesoría Tributaria</option>
+                                    <option>Otro</option>
+                                </select>
+                            </div>
+                            
+                            <div class="space-y-1.5 flex-1">
+                                <label class="block text-xs font-bold text-[#1B3A5F]" for="message">
+                                    <i class="fas fa-comment-dots text-[#00C9B7] mr-1.5"></i>Consulta breve
+                                </label>
+                                <textarea 
+                                    class="w-full rounded-lg border-2 border-gray-200 min-h-20 p-3 text-sm transition-all duration-200 focus:outline-none focus:border-[#00C9B7] focus:ring-2 focus:ring-[#00C9B7]/20 resize-none" 
+                                    style="color: #1B3A5F;"
+                                    id="message" 
+                                    placeholder="Cuéntanos sobre tu proyecto o consulta..."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <div class="flex items-start gap-2">
+                                <input type="checkbox" id="terms" class="mt-1 w-4 h-4 text-[#00C9B7] border-gray-300 rounded focus:ring-[#00C9B7] flex-shrink-0" required>
+                                <label for="terms" class="text-xs text-gray-600">Acepto los términos y condiciones</label>
+                            </div>
+                            
+                            <button 
+                                class="group relative w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#00C9B7] to-[#009688] hover:from-[#009688] hover:to-[#00C9B7] text-white font-bold py-3 px-6 rounded-xl shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden" 
+                                type="button"
+                                onclick="handleFormSubmit(event)"
+                            >
+                                <span class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+                                <i class="fas fa-paper-plane relative z-10 text-sm"></i>
+                                <span class="relative z-10 text-sm">Quiero que me contacten</span>
+                                <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform relative z-10"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA - Información de contacto y mapa -->
+                <div class="space-y-6 h-full flex flex-col">
+                    
+                    <!-- Tarjeta de información -->
+                    <div class="bg-white/95 backdrop-blur-md border-2 border-white/20 rounded-2xl p-6 shadow-2xl">
+                        <div class="flex items-center gap-3 pb-4 border-b border-gray-200 mb-5">
+                            <div class="w-10 h-10 bg-gradient-to-br from-[#00C9B7] to-[#009688] rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-info-circle text-white text-lg"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs font-semibold text-[#00C9B7] uppercase tracking-wider">Contacto</div>
+                                <h3 class="text-base font-bold text-[#1B3A5F]">Si prefieres llámanos o escríbenos</h3>
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-gray-600 mb-4">Estamos atentos a tu comunicación para poder ayudarte en tu emprendimiento.</p>
+
+                        <div class="space-y-3">
+                            <div class="group flex items-start gap-3 p-3 rounded-xl border border-gray-200 hover:border-[#00C9B7] hover:shadow-md transition-all">
+                                <div class="flex-shrink-0 flex items-center justify-center rounded-full w-10 h-10 bg-gradient-to-br from-[#00C9B7] to-[#009688] shadow-md group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-phone text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-[#1B3A5F] mb-0.5">Teléfono</p>
+                                    <p class="text-xs" style="color: #2B5A8C;">(+51) 962 818 648</p>
+                                </div>
+                            </div>
+
+                            <div class="group flex items-start gap-3 p-3 rounded-xl border border-gray-200 hover:border-[#00C9B7] hover:shadow-md transition-all">
+                                <div class="flex-shrink-0 flex items-center justify-center rounded-full w-10 h-10 bg-gradient-to-br from-[#00C9B7] to-[#009688] shadow-md group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-envelope text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-[#1B3A5F] mb-0.5">Email</p>
+                                    <p class="text-xs" style="color: #2B5A8C;">nexafinanzas@gmail.com </p>
+                                </div>
+                            </div>
+
+                            <div class="group flex items-start gap-3 p-3 rounded-xl border border-gray-200 hover:border-[#00C9B7] hover:shadow-md transition-all">
+                                <div class="flex-shrink-0 flex items-center justify-center rounded-full w-10 h-10 bg-gradient-to-br from-[#00C9B7] to-[#009688] shadow-md group-hover:scale-110 transition-transform">
+                                    <i class="fab fa-whatsapp text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-[#1B3A5F] mb-0.5">WhatsApp</p>
+                                    <p class="text-xs" style="color: #2B5A8C;">(+51) 962 818 648</p>
+                                </div>
+                            </div>
+
+                            <div class="group flex items-start gap-3 p-3 rounded-xl border border-gray-200 hover:border-[#00C9B7] hover:shadow-md transition-all">
+                                <div class="flex-shrink-0 flex items-center justify-center rounded-full w-10 h-10 bg-gradient-to-br from-[#00C9B7] to-[#009688] shadow-md group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-map-marker-alt text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-[#1B3A5F] mb-0.5">Dirección</p>
+                                    <p class="text-xs leading-relaxed" style="color: #2B5A8C;">
+                                        Calle Yura - Arequipa 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA WhatsApp -->
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <a 
+                                href="https://wa.me/51962818648" 
+                                target="_blank" 
+                                class="group relative inline-flex items-center justify-center gap-2 w-full bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:from-[#128C7E] hover:to-[#25D366] text-white font-bold py-2.5 px-4 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 overflow-hidden"
+                            >
+                                <span class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+                                <i class="fab fa-whatsapp text-lg relative z-10"></i>
+                                <span class="relative z-10 text-xs">Escríbenos por WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Mapa -->
+                    <div class="bg-white/95 backdrop-blur-md border-2 border-white/20 rounded-2xl overflow-hidden shadow-2xl flex-1">
+                        <div class="p-4 border-b border-gray-200">
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 bg-gradient-to-br from-[#00C9B7] to-[#009688] rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-map-marked-alt text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-semibold text-[#00C9B7] uppercase tracking-wider">Ubicación</div>
+                                    <h3 class="text-sm font-bold text-[#1B3A5F]">Encuéntranos aquí</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-64">
+                            <iframe
+                                class="w-full h-[400px] rounded-2xl"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.612046691095!2d-71.53745128513673!3d-16.40904718866378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424a8b2b1b3c1b%3A0x7e2ccba701b7368a!2sArequipa%2C%20Perú!5e0!3m2!1ses!2spe!4v1696435273526"
+                                allowfullscreen=""
+                                loading="lazy"  
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>

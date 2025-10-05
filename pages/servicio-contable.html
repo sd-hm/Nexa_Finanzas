@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-100">
+
+        <!-- SECCIÓN HERO CON IMAGEN -->
+        <div class="hero-container relative w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden">
+            <img 
+                src="./assets/images/p5.webp" 
+                class="absolute inset-0 w-full h-full object-cover"
+                alt="Constitución de Empresas - Nexa Finanzas"
+            />
+
+            <!-- Overlay con gradiente -->
+            <div class="absolute inset-0 bg-gradient-to-br from-[#1B3A5F]/90 via-[#2B4A6F]/85 to-[#1B3A5F]/80"></div>
+
+            <!-- Contenido Principal -->
+            <div class="relative z-10 flex flex-col justify-center items-center h-full px-4 sm:px-6 lg:px-8 xl:px-16 max-w-full text-center">
+                
+                <!-- Tag de servicio -->
+                <div class="inline-flex items-center gap-2 bg-gradient-to-r from-[#00C9B7] to-[#009688] text-white px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wider mb-6 shadow-lg">
+                    <i class="fas fa-building"></i>
+                    <span>Servicio Contable</span>
+                </div>
+                
+                <!-- Título principal -->
+                <h1 class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight break-words mb-4">
+                    Servicio Contable
+                    <br>
+                    <span class="text-[#00C9B7]">de Empresas en Arequipa</span>
+                </h1>
+
+                <!-- Subtítulo -->
+                <p class="text-gray-200 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium max-w-3xl pb-8 leading-relaxed">
+                    Tu Empresa al dia y cero multas con SUNAT
+                </p>
+
+                <!-- Botón WhatsApp -->
+                <a 
+                    href="https://wa.me/51962818648" 
+                    target="_blank" 
+                    class="group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#00C9B7] to-[#009688] hover:from-[#009688] hover:to-[#00C9B7] text-white font-bold py-4 px-10 rounded-xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-[#00C9B7]/50 overflow-hidden"
+                >
+                    <span class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+                    <i class="fab fa-whatsapp text-2xl relative z-10"></i>
+                    <span class="relative z-10">Habla con un asesor</span>
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform relative z-10"></i>
+                </a>
+            </div>
+        </div>
+
+        
+    </body>
+</html>
+        
+        
+        
