@@ -8,7 +8,7 @@
     <meta name="keywords" content="Nexa Finanzas, asesoría contable, servicios financieros, Arequipa, empresa">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
+    
     <style>
         .page-section {
             display: none;
@@ -75,7 +75,7 @@
     </script>
 </head>
 <body class="min-h-screen bg-gray-50 overflow-x-hidden">
-
+    
     <header id="header" class="bg-white shadow-md sticky top-0 z-50">
         <!-- Header será cargado aquí -->
     </header>
@@ -136,6 +136,15 @@
         </section>
 
         <!-- Contacto Section -->
+        <section id="educacion" class="page-section">
+            <div class="container mx-auto px-4 py-16">
+                <div class="text-center">
+                    <div class="animate-pulse">Cargando contenido...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
         <section id="contacto" class="page-section">
             <div class="container mx-auto px-4 py-16">
                 <div class="text-center">
@@ -145,13 +154,26 @@
         </section>
     </main>
 
+    <div class="fixed bottom-8 right-8 z-50">
+        <a 
+            href="https://wa.me/51962818648" 
+            target="_blank" 
+            class="group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#00C9B7] to-[#009688] hover:from-[#009688] hover:to-[#00C9B7] text-white font-semibold py-4 px-8 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 overflow-hidden"
+        >
+            <span class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+            <i class="fab fa-whatsapp text-3xl relative z-10"></i>
+            <span class="relative z-10 text-lg hidden sm:inline">Habla con un asesor</span>
+        </a>
+    </div>
+
+
     <footer id="footer" class="bg-gray-800 text-white"></footer>
 
-    <script type="module">
+    <script>
     class NavigationManager {
         constructor() {
             this.currentPage = 'inicio';
-            this.pages = ['inicio', 'nosotros', 'constitucion', 'servicio-contable', 'facturacion', 'minutas', 'contacto'];
+            this.pages = ['inicio', 'nosotros', 'constitucion', 'servicio-contable', 'facturacion', 'minutas', 'contacto', 'educacion'];
             this.mobileMenuOpen = false;
             this.init();
         }
@@ -237,18 +259,8 @@
                                 <a href="#servicio-contable" class="nav-link text-gray-700 hover:text-blue-600" data-page="servicio-contable">Servicios Contables</a>
                                 <a href="#facturacion" class="nav-link text-gray-700 hover:text-blue-600" data-page="facturacion">Facturación Electronica</a>
                                 <a href="#minutas" class="nav-link text-gray-700 hover:text-blue-600" data-page="minutas">Elaboracion de Minutas</a>
+                                <a href="#educacion" class="nav-link text-gray-700 hover:text-blue-600" data-page="educacion">Educacion Financiera</a>
                                 <a href="#contacto" class="nav-link text-gray-700 hover:text-blue-600" data-page="contacto">Contacto</a>
-
-                                <a 
-                                    href="https://wa.me/51962818648" 
-                                    target="_blank" 
-                                    class="group relative inline-flex items-center gap-2 bg-gradient-to-r from-[#00C9B7] to-[#009688] hover:from-[#009688] hover:to-[#00C9B7] text-white font-semibold py-2 px-5 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 overflow-hidden"
-                                >
-                                    <span class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
-                                    <i class="fab fa-whatsapp text-lg relative z-10"></i>
-                                    <span class="relative z-10">Habla con un asesor</span>
-                                    <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform relative z-10"></i>
-                                </a>    
                             </div>
 
                             <!-- Mobile Menu Button -->
@@ -266,7 +278,8 @@
                                 <a href="#constitucion" class="nav-link text-gray-700 hover:text-blue-600 py-2" data-page="constitucion">Constitución de Empresas</a>
                                 <a href="#servicio-contable" class="nav-link text-gray-700 hover:text-blue-600 py-2" data-page="servicio-contable">Servicios Contables</a>
                                 <a href="#facturacion" class="nav-link text-gray-700 hover:text-blue-600 py-2" data-page="facturacion">Facturación Electronica</a>
-                                <a href="#minutas" class="nav-link text-gray-700 hover:text-blue-600 py-2" data-page="minutas">Elaboracion deMinutas</a>
+                                <a href="#minutas" class="nav-link text-gray-700 hover:text-blue-600 py-2" data-page="minutas">Elaboracion de Minutas</a>
+                                <a href="#educacion" class="nav-link text-gray-700 hover:text-blue-600 py-2" data-page="educacion">Educacion Financiera</a>
                                 <a href="#contacto" class="nav-link text-gray-700 hover:text-blue-600 py-2" data-page="contacto">Contacto</a>
                             </div>
                         </div>
@@ -281,17 +294,14 @@
             const topBar = document.getElementById('top-info-bar');
             if (!topBar) return;
 
-            let lastScrollY = window.scrollY;
-
             window.addEventListener('scroll', () => {
-                if (window.scrollY > lastScrollY && window.scrollY > 50) {
-                    // Bajando
-                    topBar.style.transform = "translateY(-100%)";
-                } else {
-                    // Subiendo
+                if (window.scrollY === 0) {
+                    // Mostrar solo cuando está en el inicio total
                     topBar.style.transform = "translateY(0)";
+                } else {
+                    // Ocultar al hacer cualquier scroll
+                    topBar.style.transform = "translateY(-100%)";
                 }
-                lastScrollY = window.scrollY;
             });
         }
         
@@ -426,8 +436,23 @@
     } else {
         new NavigationManager();
     }
-    
+
+
+    function toggleFAQ(id) {
+        const element = document.getElementById(id);
+        const icon = document.getElementById('icon-' + id);
+        
+        if (element.classList.contains('hidden')) {
+            element.classList.remove('hidden');
+            icon.classList.add('rotate-180');
+        } else {
+            element.classList.add('hidden');
+            icon.classList.remove('rotate-180');
+        }
+    }
+
     </script>
+
 </body>
 
 
