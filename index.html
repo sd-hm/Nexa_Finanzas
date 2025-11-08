@@ -154,36 +154,53 @@
         </section>
     </main>
 
-    <!-- CHATBOT CONTAINER -->
-<div id="chatbot-container">
-    <!-- Botón flotante -->
-<button id="chat-toggle" class="fixed bottom-6 right-6 bg-white border-4 border-[#00C9B7] rounded-full p-3 shadow-2xl hover:shadow-[#00C9B7]/30 transition-all duration-300 z-50 hover:scale-110 group">
-    <!-- Icono del chat (imagen) -->
-    <img id="chat-icon" 
-         src="./assets/images/chatbotRecortado.png" 
-         alt="Kallpa Bot" 
-         class="w-15 h-10 object-contain group-hover:rotate-12 transition-transform" 
-         onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2300C9B7%22 stroke-width=%222%22%3E%3Cpath d=%22M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z%22/%3E%3C/svg%3E'" />
+    <div id="chatbot-container" class="fixed bottom-6 right-6 z-50">
+        <button id="chat-toggle" class="flex items-center justify-center bg-white border-4 border-[#00C9B7] rounded-full p-3 shadow-2xl hover:shadow-[#00C9B7]/30 transition-all duration-300 hover:scale-110 group relative space-x-3 sm:space-x-4">
+          
+          <!-- Imagen 1 (contador) - SIEMPRE VISIBLE -->
+          <img src="./assets/images/contador-Photoroom.png" 
+               alt="Contador" 
+               class="w-10 h-10 sm:w-[70px] sm:h-[70px] object-contain" />
+          
+          <!-- Contenedor para alternar entre chatbot y cerrar -->
+          <div class="relative w-14 h-10 sm:w-[100px] sm:h-10 flex items-center justify-center">
+            <!-- Imagen 2 (chatbot) - visible por defecto -->
+            <img id="chat-icon" 
+                 src="./assets/images/chatbotRecortado.png" 
+                 alt="Kallpa Bot" 
+                 class="w-full h-full object-contain" 
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2300C9B7%22 stroke-width=%222%22%3E%3Cpath d=%22M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z%22/%3E%3C/svg%3E'" />
+            
+            <!-- Icono de cerrar - oculto por defecto -->
+            <svg id="close-icon" 
+                 class="w-10 h-10 hidden text-[#00C9B7] group-hover:rotate-90 transition-transform absolute inset-0 m-auto" 
+                 fill="none" 
+                 stroke="currentColor" 
+                 viewBox="0 0 24 24">
+              <path stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    stroke-width="2.5" 
+                    d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </div>
+          
+          <!-- Badge IA -->
+          <span class="absolute -top-1 -right-1 bg-gradient-to-r from-[#00C9B7] to-[#009688] text-white text-[10px] font-bold rounded-full w-6 h-6 flex items-center justify-center shadow-lg">
+            IA
+          </span>
+        </button>
+      </div>
     
-    <!-- Icono de cerrar (X) -->
-    <svg id="close-icon" class="w-10 h-10 hidden text-[#00C9B7] group-hover:rotate-90 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
-    </svg>
     
-    <!-- Badge de IA -->
-    <span class="absolute -top-1 -right-1 bg-gradient-to-r from-[#00C9B7] to-[#009688] text-white text-[10px] font-bold rounded-full w-6 h-6 flex items-center justify-center shadow-lg">
-        IA
-    </span>
-</button>
 
-    <!-- Ventana del chat -->
-    <div id="chat-window" class="fixed bottom-24 right-6 w-96 max-w-[calc(100vw-3rem)] h-[600px] max-h-[calc(100vh-8rem)] bg-white rounded-2xl shadow-2xl z-50 hidden flex-col overflow-hidden border-2 border-[#00C9B7]/20 animate-slide-up">
+    <!-- Ventana del chat - RESPONSIVE Y POSICIONADA CORRECTAMENTE -->
+    <div id="chat-window" class="fixed bottom-42 sm:bottom-36 right-3 sm:right-6 w-[calc(100vw-1.5rem)] sm:w-96 h-[500px] sm:h-[600px] max-h-[calc(100vh-10rem)] bg-white rounded-2xl shadow-2xl z-40 hidden flex-col overflow-hidden border-2 border-[#00C9B7]/20 animate-slide-up">
         <!-- ✨ HEADER SIMPLE Y LIMPIO ✨ -->
-        <div class="bg-gradient-to-r from-[#00C9B7] to-[#009688] text-white p-5">
-            <div class="flex items-center gap-4">
+        <div class="bg-gradient-to-r from-[#00C9B7] to-[#009688] text-white p-4 sm:p-5">
+            <div class="flex items-center gap-3 sm:gap-4">
                 
                 <!-- Logo -->
-                <div class="w-20 h-14 bg-white rounded-xl flex items-center justify-center shadow-lg p-2">
+                <div class="w-16 h-12 sm:w-20 sm:h-14 bg-white rounded-xl flex items-center justify-center shadow-lg p-2">
                     <img src="./assets/images/chatbotRecortado.png" 
                          alt="Kallpa Logo" 
                          class="w-full h-full object-contain" 
@@ -192,28 +209,26 @@
                 
                 <!-- Texto -->
                 <div class="flex-1">
-                    <p class="text-md text-white/90 flex items-center gap-1.5">
+                    <p class="text-sm sm:text-md text-white/90 flex items-center gap-1.5">
                         <span class="w-2 h-2 bg-green-400 rounded-full"></span>
                         Asistente IA en línea
                     </p>
                 </div>
-                
-
             </div>
         </div>
 
         <!-- Mensajes -->
-        <div id="chat-messages" class="flex-1 overflow-y-auto p-4 space-y-4 bg-gradient-to-b from-gray-50 to-white">
+        <div id="chat-messages" class="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 bg-gradient-to-b from-gray-50 to-white">
             <!-- Mensaje de bienvenida -->
             <div class="flex gap-2 animate-fade-in">
-                <div class="w-10 h-10 bg-gradient-to-br from-[#00C9B7] to-[#009688] rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
-                    <span class="text-white text-sm font-bold">🤖</span>
+                <div class="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-[#00C9B7] to-[#009688] rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <span class="text-white text-xs sm:text-sm font-bold">🤖</span>
                 </div>
-                <div class="bg-white rounded-2xl rounded-tl-none p-4 shadow-lg max-w-[85%] border border-gray-100">
-                    <p class="text-gray-800 text-sm leading-relaxed">
+                <div class="bg-white rounded-2xl rounded-tl-none p-3 sm:p-4 shadow-lg max-w-[85%] border border-gray-100">
+                    <p class="text-gray-800 text-xs sm:text-sm leading-relaxed">
                         ¡Hola! 👋 Soy <strong class="text-[#00C9B7]">Kallpa</strong>, tu asistente.
                     </p>
-                    <div class="mt-3 p-3 bg-gradient-to-r from-[#00C9B7]/5 to-[#009688]/5 rounded-xl">
+                    <div class="mt-2 sm:mt-3 p-2 sm:p-3 bg-gradient-to-r from-[#00C9B7]/5 to-[#009688]/5 rounded-xl">
                         <p class="text-xs font-semibold text-[#1B3A5F] mb-2">📚 Puedo ayudarte con:</p>
                         <div class="space-y-1">
                             <p class="text-xs text-gray-700 flex items-center gap-2">
@@ -224,7 +239,7 @@
                             </p>
                         </div>
                     </div>
-                    <p class="text-xs text-gray-600 mt-3 italic">
+                    <p class="text-xs text-gray-600 mt-2 sm:mt-3 italic">
                         ¿En qué puedo ayudarte hoy? 😊
                     </p>
                 </div>
@@ -232,17 +247,17 @@
         </div>
 
         <!-- Input -->
-        <div class="p-4 bg-white border-t-2 border-gray-100">
+        <div class="p-3 sm:p-4 bg-white border-t-2 border-gray-100">
             <div class="flex gap-2">
                 <input 
                     type="text" 
                     id="chat-input" 
-                    placeholder="Escribe tu pregunta aquí..." 
-                    class="flex-1 border-2 border-gray-200 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#00C9B7] focus:border-transparent text-sm placeholder-gray-400 transition-all"
+                    placeholder="Escribe tu pregunta..." 
+                    class="flex-1 border-2 border-gray-200 rounded-full px-3 sm:px-4 py-2 sm:py-3 focus:outline-none focus:ring-2 focus:ring-[#00C9B7] focus:border-transparent text-xs sm:text-sm placeholder-gray-400 transition-all"
                     maxlength="500"
                 >
-                <button id="send-button" class="bg-gradient-to-r from-[#00C9B7] to-[#009688] text-white rounded-full p-3 hover:scale-105 transition-transform disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 shadow-lg">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="send-button" class="bg-gradient-to-r from-[#00C9B7] to-[#009688] text-white rounded-full p-2 sm:p-3 hover:scale-105 transition-transform disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 shadow-lg">
+                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                     </svg>
                 </button>
@@ -386,7 +401,7 @@
                         
                         <div class="flex items-center space-x-4">
                             <div class="flex items-center space-x-5">
-                                <a href="https://www.tiktok.com/@kallpafiananzas" target="_blank" class="hover:opacity-80">
+                                <a href="https://www.tiktok.com/@kallpafinanzas" target="_blank" class="hover:opacity-80">
                                     <i class="fab fa-tiktok text-lg"></i>
                                 </a>
                                 <a href="https://www.facebook.com/profile.php?id=61583059784585" target="_blank" class="hover:opacity-80">
@@ -1007,7 +1022,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+const chatToggle = document.getElementById('chat-toggle');
+const chatIcon = document.getElementById('chat-icon');
+const closeIcon = document.getElementById('close-icon');
 
+chatToggle.addEventListener('click', () => {
+  // Alternar entre chatbot y cerrar
+  chatIcon.classList.toggle('hidden');
+  closeIcon.classList.toggle('hidden');
+});
     </script>
 
 </body>
