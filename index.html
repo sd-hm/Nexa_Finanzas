@@ -706,9 +706,10 @@ class KallpaAIChat {
         }
 
         const result = await response.json();
-        return result.reply || result.response || "No se recibió respuesta del servidor";
+        // 🔥 Cambia esto:
+        return result.response || result.reply || "No se recibió respuesta";
     } catch (e) {
-        console.error("❌ Error conectando con la API", e);
+        console.error("❌ Error:", e);
         throw e;
     }
 }
